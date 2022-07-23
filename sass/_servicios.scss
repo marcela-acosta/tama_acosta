@@ -1,0 +1,21 @@
+/* INICIO MAIN SERVICIOS */
+main {
+    .sectionColor {
+        .container {
+            .row {
+                .div1Travel {
+                    background-image: url("../img/cat.png");
+                }
+                .animate__animated {
+                    .h1Travel {
+                        &:hover {
+                        color: #6db3b4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* FIN MAIN SERVICIOS */

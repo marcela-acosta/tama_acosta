@@ -1,0 +1,43 @@
+/* INICIO MAIN CONTACTO */
+main {
+    .sectionColor {
+        .container {
+            .row {
+                .animate__animated {
+                    .formContact {
+                        .blockMobile {
+                            input {
+                                border: none;
+                                border-bottom: 1px solid $colorHoverButton;
+                                outline: 0;
+                            }
+                        }
+                        .block {
+                            textarea {
+                                border: none;
+                                border-bottom: 1px solid $colorHoverButton;
+                                outline: 0;
+                                resize: none;
+                            }
+                        }
+                        .block {
+                            button {
+                                background: $colorButton;
+                                color: white;
+                                border-radius: 10px;
+                                font-family: 'Ubuntu', sans-serif;
+                                transition: background-color 300ms ease-out;
+                                outline: 0;
+                                &:hover, &:focus {
+                                    background: $colorHoverButton;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* FIN MAIN CONTACTO */

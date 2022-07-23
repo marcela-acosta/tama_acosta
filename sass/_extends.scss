@@ -1,0 +1,28 @@
+/* INICIO EXTENDS */
+.booking {
+    width: 300px;
+    height: 70px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    border-radius: 10px;
+}
+
+.bookingClinic {
+    @extend .booking;
+    background-color: $colorButton;
+    &:hover {
+        background-color: $colorHoverButton;
+    }
+}
+
+.bookingPhone {
+    @extend .booking;
+    color: $colorButton;
+    &:hover {
+        background-color: $colorHoverButton !important;
+        color: white;
+    }
+}
+/* FIN EXTENDS */

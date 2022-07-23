@@ -1,0 +1,16 @@
+/* INICIO MIXINS */
+@mixin boxHeight($height){
+    height: $height; 
+}
+
+@mixin imageCenter(){
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.box__mixin {
+    @include boxHeight(450px);
+    @include imageCenter();
+}
+/* FIN MIXINS */

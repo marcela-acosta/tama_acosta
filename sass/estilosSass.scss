@@ -1,0 +1,57 @@
+$colorPrincipal: #103355;
+$colorSecundario: rgb(38, 101, 156);
+$colorHover: #37bcf9;
+$colorButton: #ed494a;
+$colorHoverButton: #f29e9c; 
+$colorHoverHeading: #f37a5f;
+
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    .sectionColor {
+        background-color: #f6f0eb;
+    }
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    h1 {
+        transition: all 300ms ease-in-out;
+        font-size: 2.5rem;
+        line-height: 1.5;
+        color: $colorPrincipal;
+        &:hover {
+            color: $colorHoverHeading;
+        }
+    }
+    h2 {
+        color: $colorSecundario;
+        font-size: 2rem;
+    }
+    h3 {
+        color: $colorSecundario;
+    }
+    div, p {
+        color: $colorPrincipal;
+        line-height: 1.6;
+    }
+    .a-link {
+        &:hover {
+            color: $colorHover;
+        }
+    }
+}
+
+@import "header.scss";
+@import "index.scss";
+@import "ingresar.scss";
+@import "tienda.scss";
+@import "servicios.scss";
+@import "contacto.scss";
+@import "footer.scss";
+@import "maps.scss";
+@import "extends.scss";
+@import "mixins.scss";

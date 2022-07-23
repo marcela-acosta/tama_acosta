@@ -1,0 +1,45 @@
+/* INICIO MAIN INGRESAR */
+main {
+    .sectionColor {
+        .container {
+            .row {
+                .animate__animated {
+                    .form {
+                        div {
+                            .form-inputs {
+                                border: none;
+                                outline: 0;
+                                border-bottom: 1px solid #f29e9c;   
+                            }
+                        }
+                        .form-button {
+                            width: 150px;
+                            height: 40px;
+                            display: block;
+                            margin: 30px auto;
+                            background-color: $colorButton;
+                            color: white;
+                            font-family: 'Ubuntu', sans-serif;
+                            border-radius: 10px;
+                            &:hover {
+                                background-color: $colorHoverButton !important;
+                            }
+                            &:focus {
+                                background-color: $colorHoverButton !important;
+                            }
+                        }
+                        .secondButton {
+                            color: $colorButton;
+                        }
+                    }
+                }
+                .div1Login {
+                    background-image: url("../img/hands.jpg");
+                    height: 520px;
+                }
+            }
+        }
+    }
+}
+
+/* FIN MAIN INGRESAR */

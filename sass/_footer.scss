@@ -1,0 +1,16 @@
+/* INICIO FOOTER */
+
+footer {
+    .container-fluid {
+        .socialMedia__face, .socialMedia__twitter, .socialMedia__insta, .socialMedia__mail {
+            width: 20px;
+            height: 20px;
+            transition: all 300ms ease-in-out;
+                &:hover {
+                    transform: scale(3) translateY(-3px);
+                }
+            }
+        }
+    }
+
+/* FIN FOOTER */

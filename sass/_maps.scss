@@ -1,0 +1,24 @@
+/* INICIO MAPS */
+$socialMedias: (
+    face: blue,
+    twitter: rgb(44, 192, 241),
+    insta: rgb(255, 81, 0),
+    mail: gray
+);
+
+@each $socialMedia, $color in $socialMedias {
+    .socialMedia__#{$socialMedia} {
+        fill: #{$color};
+    }
+}
+
+$styles:(
+    color: rgb(38, 101, 156),
+    fontSize: 1.1rem
+);
+
+.socialMedia__maps{
+    color: map-get($styles, color);
+    font-size: map-get($styles, fontSize);
+}
+/* FIN MAPS */
