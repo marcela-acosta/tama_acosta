@@ -18,7 +18,6 @@ const listaTransportadores = [
 ]
 
 // Visualización y cálculo de precios finales
-
 let action = ""
 
 while (action != "CALCULAR"){
@@ -78,7 +77,7 @@ let precioFinalTransportadores = resta(sumaFinal(precioFinalPlastico, precioFina
 let entrada = ""
 
 while (entrada != "NO"){
-    entrada = prompt("¿Quieres llevar los 3 transportadores con descuento del 20%? Ingresa NO para salir")
+    entrada = prompt("¿Quieres llevar los 3 transportadores con descuento del 20%? Ingresa SI para avanzar / NO para salir")
     switch (entrada){
         case "SI":
             alert(`El precio final por los 3 transportadores con descuento del 20% es: $${precioFinalTransportadores}`)    
