@@ -104,14 +104,14 @@ main .sectionColor .container .row .animate__animated .formContact .block textar
   outline: 0;
   resize: none; }
 
-main .sectionColor .container .row .animate__animated .formContact .block button {
+main .sectionColor .container .row .animate__animated .block button {
   background: #ed494a;
   color: white;
   border-radius: 10px;
   font-family: 'Ubuntu', sans-serif;
   transition: background-color 300ms ease-out;
   outline: 0; }
-  main .sectionColor .container .row .animate__animated .formContact .block button:hover, main .sectionColor .container .row .animate__animated .formContact .block button:focus {
+  main .sectionColor .container .row .animate__animated .block button:hover, main .sectionColor .container .row .animate__animated .formContact .block button:focus {
     background: #f29e9c; }
 
 /* FIN MAIN CONTACTO */
