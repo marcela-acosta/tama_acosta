@@ -90,30 +90,30 @@
                         <h1 class="text-start">Contáctate con nosotros</h1>
                         <form class="formContact row mt-5" method="get">
                             <div class="blockMobile text-start col-lg-6 p-3">
-                                <label for="name">Nombre</label>
+                                <label for="name" id="nameForm">Nombre</label>
                                 <input class="bg-transparent w-100 p-2" id="name" type="text" name="name" required>
                             </div>
                             <div class="blockMobile text-start col-lg-6 p-3">
-                                <label for="email">Email</label>
+                                <label for="email" id="emailForm">Email</label>
                                 <input class="bg-transparent w-100 p-2" id="email" type="email" name="email" required>
                             </div>
                             <div class="blockMobile text-start col-lg-6 p-3">
-                                <label for="phone">Teléfono</label>
+                                <label for="phone" class="phoneForm">Teléfono</label>
                                 <input class="bg-transparent w-100 p-2" id="phone" type="number" name="phone">
                             </div>
                             <div class="blockMobile text-start col-lg-6 p-3">
-                                <label for="topic">Asunto</label>
+                                <label for="topic" id="topicForm">Asunto</label>
                                 <input class="bg-transparent w-100 p-2" id="topic" type="text" name="topic">
                             </div>
                             <div class="block text-start p-3">
-                                <label for="textarea">Déjanos tu mensaje:</label>
+                                <label for="textarea" id="instructionsForm">Déjanos tu mensaje:</label>
                                 <textarea id="textarea" name="instructions" class="bg-transparent w-100 p-2 textarea"
                                     required></textarea>
                             </div>
-                            <div class="block p-3">
-                                <button class="fs-5 border-0 w-100 p-2" type="submit">Enviar</button>
-                            </div>
                         </form>
+                        <div class="block p-3">
+                            <button class="fs-5 border-0 w-100 p-2" type="submit">Enviar</button>
+                        </div>
                     </div>
 
                     <div class="col-xl-4 col-lg-12 p-4">
@@ -125,8 +125,10 @@
                                     class="a-link text-decoration-none" href="mailto:contacto@veterinariatama.com">
                                     contacto@veterinariatama.com</a></li>
                         </ul>
-                        <p class="text-start">Próximamente abriremos una sucursal en <strong>Punta del Este</strong>. Mientras tanto, te esperamos en nuestra sucursal en Montevideo. </p>
-                        <p class="text-start">No dudes en contactarnos a través del formulario, llamándonos por teléfono o enviándonos un email.</p>
+                        <p class="text-start">Próximamente abriremos una sucursal en <strong>Punta del Este</strong>.
+                            Mientras tanto, te esperamos en nuestra sucursal en Montevideo. </p>
+                        <p class="text-start">No dudes en contactarnos a través del formulario, llamándonos por teléfono
+                            o enviándonos un email.</p>
                     </div>
                 </div>
             </div>
@@ -172,6 +174,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <!-- JS Script -->
+    <script src="../js/contacto.js"></script>
 </body>
 
 </html>
