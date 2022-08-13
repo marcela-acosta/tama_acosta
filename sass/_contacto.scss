@@ -20,17 +20,17 @@ main {
                                 resize: none;
                             }
                         }
-                        .block {
-                            button {
-                                background: $colorButton;
-                                color: white;
-                                border-radius: 10px;
-                                font-family: 'Ubuntu', sans-serif;
-                                transition: background-color 300ms ease-out;
-                                outline: 0;
-                                &:hover, &:focus {
-                                    background: $colorHoverButton;
-                                }
+                    }
+                    .block {
+                        button {
+                            background: $colorButton;
+                            color: white;
+                            border-radius: 10px;
+                            font-family: 'Ubuntu', sans-serif;
+                            transition: background-color 300ms ease-out;
+                            outline: 0;
+                            &:hover, &:focus {
+                                background: $colorHoverButton;
                             }
                         }
                     }
