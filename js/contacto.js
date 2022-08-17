@@ -52,7 +52,6 @@ console.log(changeText);
 // Evento submit
 window.addEventListener('load', function(){
     let formularioContacto = document.querySelector("#formularioContacto");
-
     formularioContacto.addEventListener('submit', function(event){
         event.preventDefault();
         console.log(event);
