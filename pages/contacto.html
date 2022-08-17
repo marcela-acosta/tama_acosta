@@ -88,7 +88,7 @@
                 <div class="row">
                     <div class="animate__animated animate__fadeInUp col-xl-8 col-lg-12">
                         <h1 class="text-start">Contáctate con nosotros</h1>
-                        <form class="formContact row mt-5" method="get">
+                        <form method="get" class="formContact row mt-5" id="formularioContacto">
                             <div class="blockMobile text-start col-lg-6 p-3">
                                 <label for="name" id="nameForm">Nombre</label>
                                 <input class="bg-transparent w-100 p-2" id="name" type="text" name="name" required>
@@ -98,7 +98,7 @@
                                 <input class="bg-transparent w-100 p-2" id="email" type="email" name="email" required>
                             </div>
                             <div class="blockMobile text-start col-lg-6 p-3">
-                                <label for="phone" class="phoneForm">Teléfono</label>
+                                <label for="phone" id="phoneForm">Teléfono</label>
                                 <input class="bg-transparent w-100 p-2" id="phone" type="number" name="phone">
                             </div>
                             <div class="blockMobile text-start col-lg-6 p-3">
@@ -110,25 +110,29 @@
                                 <textarea id="textarea" name="instructions" class="bg-transparent w-100 p-2 textarea"
                                     required></textarea>
                             </div>
+                            <div class="block p-3">
+                                <button class="fs-5 border-0 w-100 p-2" type="submit" id="submit">Enviar</button>
+                            </div>
                         </form>
-                        <div class="block p-3">
-                            <button class="fs-5 border-0 w-100 p-2" type="submit">Enviar</button>
-                        </div>
                     </div>
 
-                    <div class="col-xl-4 col-lg-12 p-4">
-                        <h2 class="text-start my-4 pt-5">Más información</h2>
-                        <ul class="text-start list-unstyled">
-                            <li class="py-2"><i class="fas fa-map-marker-alt"></i> Cno. Carrasco 5975</li>
-                            <li class="py-2"><i class="fas fa-phone"></i> (+598) 22446688</li>
-                            <li class="py-2"><i class="fas fa-envelope-open-text"></i><a
-                                    class="a-link text-decoration-none" href="mailto:contacto@veterinariatama.com">
-                                    contacto@veterinariatama.com</a></li>
-                        </ul>
-                        <p class="text-start">Próximamente abriremos una sucursal en <strong>Punta del Este</strong>.
-                            Mientras tanto, te esperamos en nuestra sucursal en Montevideo. </p>
-                        <p class="text-start">No dudes en contactarnos a través del formulario, llamándonos por teléfono
-                            o enviándonos un email.</p>
+                    <div class="cajaLateral">
+                        <h3>Información del usuario</h3>
+                        <p id="pName">
+                            Nombre: <span></span>
+                        </p>
+                        <p id="pEmail">
+                            Email: <span></span>
+                        </p>
+                        <p id="pPhone">
+                            Teléfono: <span></span>
+                        </p>
+                        <p id="pTopic">
+                            Asunto: <span></span>
+                        </p>
+                        <p id="pInstructions">
+                            Tu mensaje: <span></span>
+                        </p>
                     </div>
                 </div>
             </div>
