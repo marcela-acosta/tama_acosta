@@ -82,6 +82,16 @@ main .sectionColor .container .row .animate__animated .form .form-button {
   border-radius: 10px;
 }
 
+main .sectionColor .container .row .animate__animated .form .firstButton {
+  background-color: #ed494a;
+  color: white;
+}
+
+main .sectionColor .container .row .animate__animated .form .secondButton {
+  background-color: white;
+  color: #ed494a;
+}
+
 main .sectionColor .container .row .div1Login {
   background-image: url("../img/hands.jpg");
   height: 520px;
@@ -89,12 +99,98 @@ main .sectionColor .container .row .div1Login {
 
 /* FIN MAIN INGRESAR */
 /* INICIO MAIN TIENDA */
-main .pros {
-  color: #2fa8e0;
+main .sectionColor .btn {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.67em 0.67em;
+  cursor: pointer;
 }
 
-main .cons {
-  color: #a93537;
+main .sectionColor .btn-primary {
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+main .sectionColor .cabeceraCarrito {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #333;
+}
+
+main .sectionColor .carritoColumna {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+main .sectionColor .filaCarrito {
+  display: flex;
+}
+
+main .sectionColor .carritoArticulo {
+  width: 45%;
+}
+
+main .sectionColor .carritoPrecio {
+  width: 20%;
+  font-size: 1.2em;
+}
+
+main .sectionColor .carritoCantidadTitulo {
+  width: 35%;
+}
+
+main .sectionColor .carritoArticuloTitulo {
+  margin-left: .5em;
+  font-size: 1.2em;
+}
+
+main .sectionColor .carritoArticuloImagen {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
+
+main .sectionColor .btn-danger {
+  color: white;
+  background-color: #ff5100;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+main .sectionColor .carritoCantidad {
+  height: 40px;
+  width: 45px;
+  border-radius: 5px;
+  border: 1px solid #f29e9c;
+  background-color: #eee;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0 25px 0 0;
+}
+
+main .sectionColor .carritoTotal {
+  text-align: end;
+  margin: 10px;
+}
+
+main .sectionColor .carritoTotalTitulo {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0 20px;
+}
+
+main .sectionColor .precioTotal {
+  font-size: 1.5em;
+}
+
+main .sectionColor .btn-purchase {
+  display: block;
+  margin: 40px auto 80px auto;
+  font-size: 1.5em;
 }
 
 /* FIN MAIN TIENDA */
