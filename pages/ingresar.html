@@ -88,10 +88,15 @@
                 <div class="row">
                     <div class="animate__animated animate__fadeInUp col-xl-7 col-lg-12">
                         <h1 class="mb-5">Ingresar</h1>
-                        <form method="get" class="form text-start fs-5">
+                        <form method="get" class="form text-start fs-5" id="login">
+                            <div>
+                                <label for="name">Name</label>
+                                <input id="formName" type="name" name="name"
+                                    class="form-inputs bg-transparent w-100 p-2 mb-4" required>
+                            </div>
                             <div>
                                 <label for="email">Email</label>
-                                <input id="email" type="email" name="email"
+                                <input id="formEmail" type="email" name="email"
                                     class="form-inputs bg-transparent w-100 p-2 mb-4" required>
                             </div>
                             <div>
@@ -102,12 +107,14 @@
                             <p class="text-center my-4 pt-4"><a class="a-link text-decoration-none" href="#">¿Olvidó su
                                     contraseña?</a>
                             </p>
-                            <button type="submit" class="form-button border-0" id="boton">Ingresar</button>
-                            <button type="button"
-                                class="form-button secondButton border-0" id="botonRegistro">Registrarse</button>
+                            <button type="submit" class="form-button firstButton border-0" id="boton">Ingresar</button>
+                            <button type="button" class="form-button secondButton border-0"
+                                id="botonRegistro">Registrarse</button>
                         </form>
                     </div>
-                    <div class="box__mixin div1Login d-flex col-xl-5 col-lg-12"></div>
+                    <div class="box__mixin div1Login d-flex col-xl-5 col-lg-12" id="bienvenido">
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -152,7 +159,7 @@
         crossorigin="anonymous"></script>
 
     <!-- JS Script -->
-    <script src="../js/ingresar.js"></script>
+    <script src="../src/ingresar.js"></script>
 </body>
 
 </html>
