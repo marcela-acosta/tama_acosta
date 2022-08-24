@@ -25,6 +25,13 @@ function ready() {
     }
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', comprarClick)
+
+    const articulosGuardados = obtenerArticulosLocalStorage()
+ articulosGuardados.forEach((articulo)=>{
+     agregarArtAlCarrito(articulo.title, articulo.price, articulo.imageSrc)
+ })
+
+ actualizarTotal()
 }
 
 function comprarClick() {
@@ -36,11 +43,31 @@ function comprarClick() {
     actualizarTotal()
 }
 
+function obtenerArticulosLocalStorage(){
+    let articuloLS;
+    if(localStorage.getItem('articulos') === null){   
+            articuloLS = [];
+    }else{
+            articuloLS = JSON.parse(localStorage.getItem('articulos'));
+    }
+    return articuloLS;
+}
+
 function eliminaArtCarrito(event){
     let buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
+    eliminarArticulosLocalStorage(event.target.parentElement.parentElement.children[0].children[1])
     actualizarTotal()
 }
+
+function eliminarArticulosLocalStorage(articuloID){
+    let articulosLS;
+    articulosLS = obtenerArticulosLocalStorage();
+    const nuevaLista = articulosLS.filter((articulo)=>{
+        return articulo.title != articuloID.innerText
+    })
+    localStorage.setItem('articulos', JSON.stringify(nuevaLista));
+ }
 
 function cambiarCantidad(event){
     let input = event.target
@@ -61,6 +88,13 @@ function agregaCarritoClick(event) {
 }
 
 function agregarArtAlCarrito(title, price, imageSrc) {
+    const articulo = {
+        title: title,
+        imageSrc: imageSrc,
+        price: price,
+    }
+    guardarArticulosLocalStorage(articulo);
+
     let carritoFila = document.createElement('div')
     carritoFila.classList.add('filaCarrito')
     let carritoArticulos = document.getElementsByClassName('articulosCarrito')[0]
@@ -85,8 +119,15 @@ function agregarArtAlCarrito(title, price, imageSrc) {
     carritoArticulos.append(carritoFila)
     carritoFila.getElementsByClassName('btn-danger')[0].addEventListener('click', eliminaArtCarrito)
     carritoFila.getElementsByClassName('carritoCantidad')[0].addEventListener('change', cambiarCantidad)
-	//this.guardarArticulosLocalStorage(articulo);
+    guardarArticulosLocalStorage(articulo);
 }
+
+function guardarArticulosLocalStorage(articulo){
+    let articulos;
+    articulos = this.obtenerArticulosLocalStorage();
+    articulos.push(articulo);
+    localStorage.setItem('articulos', JSON.stringify(articulos));
+ }
 
 function actualizarTotal() {
     let cartItemContainer = document.getElementsByClassName('articulosCarrito')[0]
@@ -104,38 +145,15 @@ function actualizarTotal() {
     document.getElementsByClassName('precioTotal')[0].innerText = '$' + total
 }
 
-// LocalStorage
-const articulo = {
-    title: title,
-    imageSrc: imageSrc,
-    price: price,
-}
 
-guardarArticulosLocalStorage(articulo);
 
-function guardarArticulosLocalStorage(articulo){
-    let articulos;
-    articulos = this.obtenerArticulosLocalStorage();
-    articulos.push(articulo);
-    localStorage.setItem('articulos', JSON.stringify(articulos));
- }
 
- eliminarArticulosLocalStorage(event.target.parentElement.parentElement.children[0].children[1])
 
- function eliminarArticulosLocalStorage(articuloID){
-    let articulosLS;
-    articulosLS = obtenerArticulosLocalStorage();
-    const nuevaLista = articulosLS.filter((articulo)=>{
-        return articulo.title != articuloID.innerText
-    })
-    localStorage.setItem('articulos', JSON.stringify(nuevaLista));
- }
 
- const articulosGuardados = obtenerArticulosLocalStorage()
- articulosGuardados.forEach((articulo)=>{
-     agregarArtAlCarrito(articulo.title, articulo.price, articulo.imageSrc)
- })
+ 
 
- actualizarTotal()
+ 
+
+ 
 
 
