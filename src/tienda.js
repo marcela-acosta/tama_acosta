@@ -105,31 +105,37 @@ function actualizarTotal() {
 }
 
 // LocalStorage
-// guardarArticulosLocalStorage(buttonClicked){
-// 	let articulos;
-// 	articulos = this.obtenerArticulosLocalStorage();
-// 	articulos.push(buttonClicked);
-// 	localStorage.setItem('articulos', JSON.stringify(articulos));
-// }
+const articulo = {
+    title: title,
+    imageSrc: imageSrc,
+    price: price,
+}
 
-// obtenerArticulosLocalStorage(){
-// 	let articuloLS;
-// 	if(localStorage.getItem('articulos') === null){
-// 		articuloLS = [];
-// 	}else{
-// 		articuloLS = JSON.parse(localStorage.getItem('articulos'));
-// 	}
-// 	return articuloLS;
-// }
+guardarArticulosLocalStorage(articulo);
 
-// eliminarArticulosLocalStorage(articuloID){
-// 	let articulosLS;
-// 	articulosLS = this.obtenerArticulosLocalStorage();
-// 	articulosLS.forEach(function(articuloLS, index){
-// 		if(articuloLS.id === articuloID){
-// 			articulosLS.splice(index, 1);
-// 		}
-// 	});
-// 	localStorage.setItem('articulos', JSON.stringify(articulosLS));
-// }
+function guardarArticulosLocalStorage(articulo){
+    let articulos;
+    articulos = this.obtenerArticulosLocalStorage();
+    articulos.push(articulo);
+    localStorage.setItem('articulos', JSON.stringify(articulos));
+ }
+
+ eliminarArticulosLocalStorage(event.target.parentElement.parentElement.children[0].children[1])
+
+ function eliminarArticulosLocalStorage(articuloID){
+    let articulosLS;
+    articulosLS = obtenerArticulosLocalStorage();
+    const nuevaLista = articulosLS.filter((articulo)=>{
+        return articulo.title != articuloID.innerText
+    })
+    localStorage.setItem('articulos', JSON.stringify(nuevaLista));
+ }
+
+ const articulosGuardados = obtenerArticulosLocalStorage()
+ articulosGuardados.forEach((articulo)=>{
+     agregarArtAlCarrito(articulo.title, articulo.price, articulo.imageSrc)
+ })
+
+ actualizarTotal()
+
 
