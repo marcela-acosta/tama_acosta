@@ -39,8 +39,9 @@ function comprarClick() {
 }
 
 function obtenerArticulosLocalStorage(){
-    let articuloLS;
-    localStorage.getItem('articulos') === null ? articuloLS = [] : articuloLS = JSON.parse(localStorage.getItem('articulos'));
+    // let articuloLS;
+    // localStorage.getItem('articulos') === null ? articuloLS = [] : articuloLS = JSON.parse(localStorage.getItem('articulos'));
+    let articuloLS = localStorage.getItem('articulos') === null ?  [] : JSON.parse(localStorage.getItem('articulos'));
     return articuloLS;
 }
 
@@ -89,9 +90,12 @@ function agregarArtAlCarrito(title, price, imageSrc) {
     let carritoArticulos = document.getElementsByClassName('articulosCarrito')[0];
     let cartItemNames = carritoArticulos.getElementsByClassName('carritoArticuloTitulo');
     for (let i = 0; i < cartItemNames.length; i++) {
-        cartItemNames[i].innerText == title && alert('Este artículo ya ha sido agregado al carrito'); 
-        return;
+        if (cartItemNames[i].innerText == title) {
+            alert('Este artículo ya ha sido agregado al carrito');
+            return;
+        }
     }
+
     let carritoFilaContenido = `
         <div class="carritoArticulo carritoColumna">
             <img class="carritoArticuloImagen" src="${imageSrc}" width="100" height="100">
