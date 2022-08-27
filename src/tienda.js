@@ -39,9 +39,7 @@ function comprarClick() {
 }
 
 function obtenerArticulosLocalStorage(){
-    // let articuloLS;
-    // localStorage.getItem('articulos') === null ? articuloLS = [] : articuloLS = JSON.parse(localStorage.getItem('articulos'));
-    let articuloLS = localStorage.getItem('articulos') === null ?  [] : JSON.parse(localStorage.getItem('articulos'));
+    let articuloLS = localStorage.getItem('articulos') === null ? [] : JSON.parse(localStorage.getItem('articulos'));
     return articuloLS;
 }
 
@@ -57,13 +55,13 @@ function eliminarArticulosLocalStorage(articuloID){
     articulosLS = obtenerArticulosLocalStorage();
     const nuevaLista = articulosLS.filter((articulo)=>{
         return articulo.title != articuloID.innerText;
-    })
+    });
     localStorage.setItem('articulos', JSON.stringify(nuevaLista));
  }
 
 function cambiarCantidad(event){
     let input = event.target;
-    isNaN(input.value) || input.value <= 0 && input.value ==  1;
+    isNaN(input.value) || input.value <= 0 && input.value == 1;
     actualizarTotal();
 }
 
