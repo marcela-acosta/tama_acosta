@@ -30,7 +30,7 @@ function ready() {
 }
 
 function comprarClick() {
-    alert('Gracias por tu compra');
+    Swal.fire('Gracias por tu compra');
     let carritoArticulos = document.getElementsByClassName('articulosCarrito')[0];
     while (carritoArticulos.hasChildNodes()) {
         carritoArticulos.removeChild(carritoArticulos.firstChild);
@@ -45,8 +45,24 @@ function obtenerArticulosLocalStorage(){
 
 function eliminaArtCarrito(event){
     let buttonClicked = event.target;
-    buttonClicked.parentElement.parentElement.remove();
-    eliminarArticulosLocalStorage(event.target.parentElement.parentElement.children[0].children[1]);
+    Swal.fire({
+        title: '¿Estás seguro?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            buttonClicked.parentElement.parentElement.remove();
+            eliminarArticulosLocalStorage(event.target.parentElement.parentElement.children[0].children[1]);
+          Swal.fire(
+            'Eliminado',
+            'El artículo ha sido eliminado',
+            'success'
+          )
+        }
+      });
     actualizarTotal();
 }
 
@@ -72,6 +88,10 @@ function agregaCarritoClick(event) {
     let price = shopItem.getElementsByClassName('articuloPrecio')[0].innerText;
     let imageSrc = shopItem.getElementsByClassName('articuloImagen')[0].src;
     agregarArtAlCarrito(title, price, imageSrc);
+    Toastify({    
+        text: "Agregado al carrito",        
+        duration: 3000        
+        }).showToast();
     actualizarTotal();
 }
 
@@ -89,7 +109,7 @@ function agregarArtAlCarrito(title, price, imageSrc) {
     let cartItemNames = carritoArticulos.getElementsByClassName('carritoArticuloTitulo');
     for (let i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
-            alert('Este artículo ya ha sido agregado al carrito');
+            Swal.fire('Este artículo ya ha sido agregado al carrito');
             return;
         }
     }
@@ -102,7 +122,7 @@ function agregarArtAlCarrito(title, price, imageSrc) {
         <span class="carritoPrecio carritoColumna">${price}</span>
         <div class="carritoCantidadTitulo carritoColumna">
             <input class="carritoCantidad" type="number" value="1">
-            <button class="btn btn-danger" type="button">ELIMINAR</button>
+            <button class="btn btn-danger" id="btnDelete" type="button">ELIMINAR</button>
         </div>`
     carritoFila.innerHTML = carritoFilaContenido;
     carritoArticulos.append(carritoFila);
@@ -133,6 +153,8 @@ function actualizarTotal() {
     total = Math.round(total * 100) / 100;
     document.getElementsByClassName('precioTotal')[0].innerText = '$' + total;
 }
+
+
 
 
 
