@@ -60,14 +60,14 @@ botonRegistro.addEventListener('focusout', function(){
 });
 
 // Login falso
-$(document).ready(function(){
+// $(document).ready(function(){
 
-    login.addEventListener('submit', function(event){
-        event.preventDefault();
-        console.log(event);
-    });
+    // login.addEventListener('submit', function(event){
+    //     event.preventDefault();
+    //     console.log(event);
+    // });
 
-    $("#login").on("submit", function(){
+    $("#login").submit (function(){
 
         let formName = $("#formName").val();
         localStorage.setItem("formName". formName);
@@ -88,4 +88,4 @@ $(document).ready(function(){
             location.reload();
         });
     }
-}); 
+// }); 
