@@ -59,3 +59,33 @@ botonRegistro.addEventListener('focusout', function(){
     this.style.background = "white";
 });
 
+// Login falso
+$(document).ready(function(){
+
+    login.addEventListener('submit', function(event){
+        event.preventDefault();
+        console.log(event);
+    });
+
+    $("#login").on("submit", function(){
+
+        let formName = $("#formName").val();
+        localStorage.setItem("formName". formName);
+    });
+
+    let formName = localStorage.getItem("formName");
+
+    if(formName != null && formName != "undefined"){
+        let parrafo = $("#bienvenido p");
+
+        parrafo.html("Bienvenido, "+formName);
+        parrafo.append("<a href='#' id='logout'>Cerrar sesión</a>");
+
+        $("#login").hide();
+
+        $("#logout").click(function(){
+            localStorage.clear();
+            location.reload();
+        });
+    }
+}); 
