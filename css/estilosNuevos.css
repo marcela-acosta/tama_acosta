@@ -67,11 +67,52 @@ main .sectionColor .container .row .div1Index {
 
 /* FIN MAIN INDEX */
 /* INICIO MAIN INGRESAR */
-main .sectionColor .container .row .animate__animated .form div .form-inputs {
+main .sectionColor .container .row .animate__animated #msgError {
+  text-align: center;
+  color: #b50606;
+  background-color: #f9cbcb;
+  padding: 10px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  display: none;
+}
+
+main .sectionColor .container .row .animate__animated #msgSuccess {
+  text-align: center;
+  color: #039e03;
+  background-color: #cff9d1;
+  padding: 10px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  display: none;
+}
+
+main .sectionColor .container .row .animate__animated .form .label-float {
+  position: relative;
+  padding-top: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+main .sectionColor .container .row .animate__animated .form .label-float .form-inputs {
   border: none;
   outline: 0;
   border-bottom: 1px solid #f29e9c;
+  margin-top: 15px;
 }
+
+main .sectionColor .container .row .animate__animated .form .label-float label {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0; 
+} 
 
 main .sectionColor .container .row .animate__animated .form .form-button {
   width: 150px;
@@ -92,9 +133,20 @@ main .sectionColor .container .row .animate__animated .form .secondButton {
   color: #ed494a;
 }
 
-main .sectionColor .container .row .div1Login {
-  background-image: url("../img/hands.jpg");
-  height: 520px;
+main .sectionColor .container .row .animate__animated .form .linkLogin {
+  text-decoration: none;
+  color: white;
+}
+
+main .sectionColor .container .row .animate__animated .form #textRegister {
+  color: #ed494a;
+}
+
+main .sectionColor .container .row .animate__animated .form .label-float .fa-eye {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  cursor: pointer; 
 }
 
 /* FIN MAIN INGRESAR */
