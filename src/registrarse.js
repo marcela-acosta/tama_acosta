@@ -180,7 +180,7 @@ function registrarse(){
         msgSuccess.setAttribute('style', 'display: none');
         msgSuccess.innerHTML = '';
     }
-};
+}
 
 btnRegistrarse.addEventListener('click', ()=>{
    registrarse();
@@ -193,7 +193,7 @@ btnEye.addEventListener('click', () => {
     }else{
         inputPassword.setAttribute('type', 'password');
     }
-})
+});
 
 btnConfirm.addEventListener('click', () => {
     let inputConfirmPassword = document.querySelector('#confirmPassword');
@@ -202,6 +202,6 @@ btnConfirm.addEventListener('click', () => {
     }else{
         inputConfirmPassword.setAttribute('type', 'password');
     }
-})
+});
 
 
