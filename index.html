@@ -28,7 +28,7 @@
 
 <body>
     <!-- Header -->
-    <header class="p-2">
+    <header>
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div>
@@ -64,13 +64,7 @@
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="nav-link" href="pages/ingresar.html">Ingresar</a>
-                        </li>
-                        <li class="nav-item p-3">
                             <a class="nav-link" href="pages/tienda.html">Tienda</a>
-                        </li>
-                        <li class="nav-item p-3">
-                            <a class="nav-link" href="pages/servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item p-3">
                             <a class="nav-link" href="pages/contacto.html">Contacto</a>
@@ -83,59 +77,36 @@
 
     <!-- Main -->
     <main>
-        <section class="sectionColor container-fluid py-5">
+        <section class="sectionColor container-fluid py-3">
             <div class="container">
                 <div class="row">
-                    <div class="box__mixin div1Index d-flex col-xl-6 col-lg-12 p-3"></div>
-                    <div class="animate__animated animate__fadeInUp col-xl-6 col-lg-12 p-3">
+                    <div class="box__mixin div1Index col-xl-6 col-lg-12 p-3">
                         <h1>Veterinaria Tama</h1>
-                        <h2 class="mb-4 p-2">Atención profesional para tus mascotas</h2>
-                        <div>
-                            <button type="submit" class="booking bookingClinic text-white p-2">Agenda una consulta en la
-                                clínica</button>
-                        </div>
-                        <div>
-                            <button type="button" class="booking bookingPhone bg-white p-2">Agenda una consulta
-                                telefónica</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sectionWhite container-fluid py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="container col-xl-6 col-lg-12 p-3">
-                        <h3 class="pb-4">Nuestro abordaje</h3>
-                        <p class="text-start pb-3">En <em>Veterinaria Tama</em> atendemos a tu mascota de manera
-                            profesional y respetuosa, teniendo en cuenta la especie y sin humanizarlos. Tratar a
-                            nuestras mascotas como
-                            personas puede causarles ansiedad, estrés y problemas de conducta.</p>
-                        <p class="text-start">¿Tienes dudas sobre los <strong>cuidados para tu mascota</strong>?
-                            Bañarlos con mucha frecuencia o hacerlo con productos inadecuados puede ser perjudicial.
-                            Agenda una consulta
-                            con nosotros y con gusto te informaremos sobre los cuidados recomendados para tu mascota.
-                        </p>
-                    </div>
-                    <div class="boxVideo d-flex justify-content-center align-items-center col-xl-6 col-lg-12 p-3">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fK89diNOLMo"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sectionColor container-fluid py-5">
-            <div class="container">
-                <div class="col-12">
-                    <h3 class="pb-3">Ven a visitarnos</h3>
-                    <div class="boxMap d-flex justify-content-center">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.412136363766!2d-56.08881358485507!3d-34.87099577919592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f871e775b2cc9%3A0x9c3f5d742bb3401!2sCno.%20Carrasco%205975%2C%2011500%20Ciudad%20de%20la%20Costa%2C%20Departamento%20de%20Montevideo!5e0!3m2!1sen!2suy!4v1647492769512!5m2!1sen!2suy"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <img src="img/dog.jpg" alt="perro">
+                        <h2 class="mb-4 p-2">Atención profesional para tus mascotas</h2></div>
+                    <div class="animate__animated animate__fadeInUp col-xl-6 col-lg-12 p-3">
+                        <h1 class="mb-5">Ingresar</h1>
+                        <div id="msgError"></div>
+                        <form method="get" class="form text-start fs-5" id="login">
+                            <div class="label-float">
+                                <input id="formEmail" type="email" name="email"
+                                    class="form-inputs bg-transparent w-100 p-2 mb-4" required>
+                                <label id="userLabel" for="email">Email</label>
+                            </div>
+                            <div class="label-float">
+                                <input id="pass" type="password" name="password"
+                                    class="form-inputs bg-transparent w-100 p-2" required>
+                                <label id="passLabel" for="password">Contraseña</label>
+                                <i class="fa fa-eye" id="seePass" aria-hidden="true"></i>
+                            </div>
+                            <p class="text-center my-4 pt-4"><a class="a-link text-decoration-none" href="#">¿Olvidó su
+                                    contraseña?</a>
+                            </p>
+                            <button type="button" class="form-button firstButton border-0" id="boton">Ingresar</button>
+                            <button type="button" class="form-button secondButton border-0" id="botonRegistro">
+                                <a class="linkLogin" id="textRegister" href="pages/registrarse.html">Registrarse</a>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
