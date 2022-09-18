@@ -40,6 +40,7 @@ header {
   top: 0;
   position: sticky;
   z-index: 999;
+  height: 100px;
 }
 header .container-fluid .navbar div .navbar-brand svg {
   width: 180px;
@@ -61,12 +62,15 @@ header
 
 /* FIN HEADER */
 /* INICIO MAIN INDEX */
-main .sectionColor .container .row .div1Index {
-  background-image: url("../img/dog.jpg");
+main .sectionColor .container .row .div1Index img {
+  width: 350px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
-/* FIN MAIN INDEX */
-/* INICIO MAIN INGRESAR */
 main .sectionColor .container .row .animate__animated #msgError {
   text-align: center;
   color: #b50606;
@@ -114,7 +118,7 @@ main .sectionColor .container .row .animate__animated .form .label-float label {
   left: 0; 
 } 
 
-main .sectionColor .container .row .animate__animated .form .form-button {
+main .sectionColor .container .row .form-button {
   width: 150px;
   height: 40px;
   display: block;
@@ -123,12 +127,12 @@ main .sectionColor .container .row .animate__animated .form .form-button {
   border-radius: 10px;
 }
 
-main .sectionColor .container .row .animate__animated .form .firstButton {
+main .sectionColor .container .row .firstButton {
   background-color: #ed494a;
   color: white;
 }
 
-main .sectionColor .container .row .animate__animated .form .secondButton {
+main .sectionColor .container .row .secondButton {
   background-color: white;
   color: #ed494a;
 }
@@ -149,7 +153,7 @@ main .sectionColor .container .row .animate__animated .form .label-float .fa-eye
   cursor: pointer; 
 }
 
-/* FIN MAIN INGRESAR */
+/* FIN MAIN INDEX */
 /* INICIO MAIN TIENDA */
 main .sectionColor .btn {
   text-align: center;
@@ -246,16 +250,6 @@ main .sectionColor .btn-purchase {
 }
 
 /* FIN MAIN TIENDA */
-/* INICIO MAIN SERVICIOS */
-main .sectionColor .container .row .div1Travel {
-  background-image: url("../img/cat.png");
-}
-
-main .sectionColor .container .row .animate__animated .h1Travel:hover {
-  color: #6db3b4;
-}
-
-/* FIN MAIN SERVICIOS */
 /* INICIO MAIN CONTACTO */
 main .sectionColor .container .row .cajaLateral {
   width: 400px;
@@ -371,12 +365,4 @@ footer .container-fluid .socialMedia__mail:hover {
 }
 
 /* FIN EXTENDS */
-/* INICIO MIXINS */
-.box__mixin {
-  height: 450px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 
-/* FIN MIXINS */
