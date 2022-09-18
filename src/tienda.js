@@ -99,7 +99,7 @@ function agregarArtAlCarrito(title, price, imageSrc) {
     const articulo = {
         title: title,
         imageSrc: imageSrc,
-        price: price,
+        price: price
     }
     guardarArticulosLocalStorage(articulo);
 

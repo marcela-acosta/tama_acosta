@@ -171,7 +171,7 @@ function registrarse(){
         msgError.innerHTML = '';
 
         setTimeout(() => {
-            window.location.href = 'ingresar.html';
+            window.location.href = '../index.html';
         }, 3000);        
 
     }else{
