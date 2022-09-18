@@ -1,3 +1,4 @@
+// Ingreso con datos del usuario
 let userLogado = JSON.parse(localStorage.getItem('userLogado')); 
 
 let logado = document.querySelector('#logado');
@@ -8,6 +9,7 @@ if(localStorage.getItem('token') == null){
   window.location.href = '../index.html';
 }
 
+// Salir del Login
 function salir(){
   localStorage.removeItem('token');
   localStorage.removeItem('userLogado');
@@ -20,10 +22,9 @@ btnSalir.addEventListener('click', ()=>{
     salir();
 });
 
-// Fetch
+// Fetch usando API con datos ficticios
 let divBienvenido = document.querySelector("#bienvenido");
 let divLindsay = document.querySelector("#lindsay");
-let divProfesor = document.querySelector("#profesor");
 
     getUsuarios()
         .then(data => data.json())

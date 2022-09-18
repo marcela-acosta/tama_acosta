@@ -22,7 +22,6 @@ botonRegistro.addEventListener('focusout', function(){
 // Fetch
 let divBienvenido = document.querySelector("#bienvenido");
 let divLindsay = document.querySelector("#lindsay");
-let divProfesor = document.querySelector("#profesor");
 
     getUsuarios()
         .then(data => data.json())
