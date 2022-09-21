@@ -194,7 +194,7 @@ main .sectionColor .carritoPrecio {
   font-size: 1.2em;
 }
 
-main .sectionColor .carritoCantidadTitulo {
+main .sectionColor .carritoCantidad {
   width: 35%;
 }
 
@@ -217,7 +217,7 @@ main .sectionColor .btn-danger {
   font-weight: bold;
 }
 
-main .sectionColor .carritoCantidad {
+main .sectionColor .carritoCantidad-input {
   height: 40px;
   width: 45px;
   border-radius: 5px;
